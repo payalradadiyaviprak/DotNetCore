@@ -25,14 +25,14 @@ export class CompanyDataComponent {
     updateedit() {
         //http.post(baseUrl + 'company/updatestudent', { x }).subscribe(res => console.log(res));
         const formData = new FormData();
-        formData.append('Id', "1");
+        formData.append('Id', "2");
         formData.append('ProjectName', "payal");
         formData.append('GroupMeetingLeadName', "no");
 
         this.http
             .post('https://localhost:44380/company/updatestudent', formData)
             .subscribe(data => {
-                alert('ok');
+                this.getstudent();
             }, error => {
                 console.log(error.json());
             });
@@ -44,11 +44,11 @@ export class CompanyDataComponent {
     };
 }
 
-let x: Company = {
-    Id: 1,
-    ProjectName: "Daxa",
-    GroupMeetingLeadName: "Analize",
-}
+//let x: Company = {
+//    Id: 1,
+//    ProjectName: "Daxa",
+//    GroupMeetingLeadName: "Analize",
+//}
 interface Company {
     Id: number;
     ProjectName: string;

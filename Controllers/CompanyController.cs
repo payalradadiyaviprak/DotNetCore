@@ -29,7 +29,7 @@ namespace TestFirstDemoCoreAngular.Controllers
         // DELETE api/aircraft/id
         [HttpPost]
 
-        public string UpdateStudent(Company company)
+        public void UpdateStudent(Company company)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
@@ -41,7 +41,6 @@ namespace TestFirstDemoCoreAngular.Controllers
                 param.Add("@oper", "edit");
                 var affectedRows = connection.Execute("GetGroupMeetingDetails_Crud", param, commandType: CommandType.StoredProcedure);
                 connection.Close();
-                return "success" + affectedRows;
             }
         }
 
