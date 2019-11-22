@@ -12,5 +12,6 @@ namespace TestFirstDemoCoreAngular
         public string ProjectName { get; set; }
 
         public string GroupMeetingLeadName { get; set; }
+        public string Oper { get; set; }
     }
 }

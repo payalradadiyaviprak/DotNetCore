@@ -38,7 +38,7 @@ namespace TestFirstDemoCoreAngular.Controllers
                 param.Add("@project", company.ProjectName);
                 param.Add("@groupname", company.GroupMeetingLeadName);
                 param.Add("@Id", company.Id);
-                param.Add("@oper", "edit");
+                param.Add("@oper", company.Oper);
                 var affectedRows = connection.Execute("GetGroupMeetingDetails_Crud", param, commandType: CommandType.StoredProcedure);
                 connection.Close();
             }
