@@ -45,6 +45,14 @@
           <label class="control-label">Group</label>
           <input type="text" class="form-control" [formControl]="m_group" name="p_group">
         </div>
+        <div class="form-group">
+          <label class="control-label">Datepicker</label>
+          <input type="text" placeholder="Datepicker" class="form-control" bsDatepicker>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Datepicker 2</label>
+          <input type="text" placeholder="Daterangepicker" class="form-control" bsDaterangepicker>
+        </div>
         <button class="btn btn-primary pull-right" type="submit">Submit</button>
         <button class="btn btn-warning" type="button" (click)="onReset()">Reset</button>
 

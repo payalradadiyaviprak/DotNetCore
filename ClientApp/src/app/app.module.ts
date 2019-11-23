@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CompanyDataComponent } from './company-data/company-data.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
     declarations: [
@@ -32,7 +33,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
             { path: 'fetch-data', component: FetchDataComponent },
             { path: 'company-data', component: CompanyDataComponent },
         ]),
-        ModalModule.forRoot()
+        ModalModule.forRoot(),
+        BsDatepickerModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]
